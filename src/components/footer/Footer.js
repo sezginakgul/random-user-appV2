@@ -12,7 +12,7 @@ const Footer = () => {
         style={{ width: "40px", margin: "0  25px 0 10px" }}
       />
       <a
-        href="#"
+        href="https://www.linkedin.com/in/sezginakgul/"
         target="_blank"
         rel="noopener noreferrer"
         style={{ textDecoration: "none" }}

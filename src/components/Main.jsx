@@ -3,6 +3,7 @@ import mailSvg from "../assets/mail.svg";
 import manSvg from "../assets/man.svg";
 import womanSvg from "../assets/woman.svg";
 import womanAgeSvg from "../assets/growing-up-woman.svg";
+import manAgeSvg from "../assets/growing-up-man.svg";
 import mapSvg from "../assets/map.svg";
 import phoneSvg from "../assets/phone.svg";
 import padlockSvg from "../assets/padlock.svg";
@@ -20,8 +21,8 @@ const Main = () => {
   const [data, setData] = useState([]);
 
   console.log("user", user);
-  console.log("screen:", screen.screen);
-  console.log("value:", screen.value);
+  // console.log("screen:", screen.screen);
+  // console.log("value:", screen.value);
 
   const randomUser = async () => {
     const url = "https://randomuser.me/api/";
@@ -37,27 +38,32 @@ const Main = () => {
       console.log(error);
     }
   };
-  console.log("user", user);
+  // console.log("user", user);
+  const filteredArray = () => {};
 
   const handlerUserList = () => {
-    data.length > 0 && data.map((item) => console.log("İtem", item));
-    setData([
-      {
-        firstName: user.name.first,
-        lastName: user.name.last,
-        email: user.email,
-        phone: user.phone,
-        age: user.dob.age,
-      },
-      ...data,
-    ]);
+    const sentence = data.some((item) => item.email === user.email);
+    {
+      !sentence &&
+        setData([
+          {
+            firstName: user.name.first,
+            lastName: user.name.last,
+            email: user.email,
+            phone: user.phone,
+            age: user.dob.age,
+            id: user.login.uuid,
+          },
+          ...data,
+        ]);
+    }
   };
 
   useEffect(() => {
     randomUser();
   }, []);
 
-  console.log("data", data);
+  // console.log("data", data);
 
   const { dob, name, email, phone, location, login, picture, gender } = user;
   return (
@@ -98,7 +104,7 @@ const Main = () => {
             </button>
             <button className="icon" data-label="age">
               <img
-                src={womanAgeSvg}
+                src={gender === "male" ? manAgeSvg : womanAgeSvg}
                 alt="age"
                 id="iconImg"
                 onMouseEnter={() =>
@@ -156,6 +162,13 @@ const Main = () => {
               onClick={() => handlerUserList()}
             >
               add user
+            </button>
+            <button
+              className="btn btn-clear"
+              type="button"
+              onClick={() => setData([])}
+            >
+              Clear List
             </button>
           </div>
 
