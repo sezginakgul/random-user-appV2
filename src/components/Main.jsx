@@ -20,7 +20,7 @@ const Main = () => {
   });
   const [data, setData] = useState([]);
 
-  console.log("user", user);
+  // console.log("user", user);
   // console.log("screen:", screen.screen);
   // console.log("value:", screen.value);
 
