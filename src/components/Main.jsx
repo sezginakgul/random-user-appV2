@@ -164,7 +164,7 @@ const Main = () => {
               add user
             </button>
             <button
-              className="btn btn-clear"
+              className="btn-clear"
               type="button"
               onClick={() => setData([])}
             >

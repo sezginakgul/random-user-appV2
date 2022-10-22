@@ -87,7 +87,8 @@ p {
 
 /*  global classes */
 
-.btn {
+.btn,
+.btn-clear {
   text-transform: uppercase;
   background: linear-gradient(360deg, #365498 0%, #182848 100%);
   color: var(--clr-white);
@@ -106,6 +107,11 @@ p {
 .btn:hover {
   color: var(--clr-grey-1);
   background: var(--clr-grey-10);
+}
+
+.btn-clear:hover {
+  color: var(--clr-grey-1);
+  background: red;
 }
 
 /* container */
@@ -181,7 +187,8 @@ p {
   color: var(--clr-primary-5);
 }
 
-.btn {
+.btn,
+.btn-clear {
   margin: 0 auto;
   margin-top: 1.5rem;
   width: 150px;
