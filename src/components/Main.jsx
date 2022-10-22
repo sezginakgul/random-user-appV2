@@ -68,7 +68,7 @@ const Main = () => {
   const { dob, name, email, phone, location, login, picture, gender } = user;
   return (
     <main>
-      <div className="block bcg-orange"></div>
+      <div className="block bcg"></div>
       <div className="block">
         <div className="container">
           <img src={picture?.large} alt="random user" className="user-img" />
@@ -163,11 +163,7 @@ const Main = () => {
             >
               add user
             </button>
-            <button
-              className="btn-clear"
-              type="button"
-              onClick={() => setData([])}
-            >
+            <button className="btn" type="button" onClick={() => setData([])}>
               Clear List
             </button>
           </div>
