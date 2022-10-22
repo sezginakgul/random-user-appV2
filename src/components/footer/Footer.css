@@ -1,11 +1,11 @@
 .footer-div {
   width: 80vw;
   min-width: 400px;
-  background-color: White;
+  background-color: #182848;
   height: 50px;
   font-size: 2rem;
-  color: #9d4d8c;
-  border: 0.5px solid #9d4d8c;
+  color: #fff;
+  border: 0.5px solid#182848;
   border-radius: 5px;
   margin: 50px 0px;
   height: 55px;
@@ -14,7 +14,7 @@
 }
 
 .brand {
-  color: #9d4d8c;
+  color: #fff;
   font-weight: bold;
   font-style: italic;
   margin-right: 1.5rem;

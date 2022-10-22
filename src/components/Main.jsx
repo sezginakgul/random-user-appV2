@@ -44,6 +44,7 @@ const Main = () => {
     setData([
       {
         firstName: user.name.first,
+        lastName: user.name.last,
         email: user.email,
         phone: user.phone,
         age: user.dob.age,
